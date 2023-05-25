@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Be0B8qGRel5JNXlIv9VZVtFYqdCbaAEkwaBXewO7jeEsZRNoxNWz6EvGV9ibC2gkYeTO3vuxxTU+R9Xr8Ve1oQ==",
+  "success": true,
+  "projectFilePath": "/Users/logananderson/Projects/Personal/AuthServer/src/Auth.Web/Auth.Web.csproj",
+  "expectedPackageFiles": [
+    "/Users/logananderson/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/logananderson/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/logananderson/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/logananderson/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/logananderson/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/logananderson/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
