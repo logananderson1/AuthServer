@@ -1,30 +1,66 @@
-import React from 'react'
-import Button from '@mui/material/Button';
-import { Container } from '@mui/material';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
+import { Container, Paper, Typography, TextField, Button } from '@mui/material';
 
-function Login() {
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleUsernameChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log('Username:', username);
+    console.log('Password:', password);
+
+    setUsername('');
+    setPassword('')
+  };
+
   return (
     <Container
-        maxWidth="sm"
-        sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: '100vh',
-        }}
+      maxWidth="xs"
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+      }}
     >
-        <Container
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-            <h1>Login</h1>
-            <Button variant='contained'>Click Me</Button>
-        </Container>
+      <Paper elevation={3} sx={{ p: 4, backgroundColor: 'white' }}>
+        <Typography variant="h5" component="h1" align="center" gutterBottom>
+          Login
+        </Typography>
+        <form onSubmit={handleSubmit}>
+          <TextField
+            label="Username"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={username}
+            onChange={handleUsernameChange}
+          />
+          <TextField
+            label="Password"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+          />
+          <Button variant="contained" color="primary" fullWidth type="submit">
+            Sign In
+          </Button>
+        </form>
+      </Paper>
     </Container>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
